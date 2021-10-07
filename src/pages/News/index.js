@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Tabs } from "antd";
 import { Container, Grid, CardActionArea, CardMedia, Card, CardContent, Typography, Button, CardActions } from '@material-ui/core';
 import { useSelector } from 'react-redux'
@@ -9,7 +9,7 @@ import './style.css'
 
 const { TabPane } = Tabs;
 export default function News() {
-
+    const [state, setState] = useState(0)
     const { arrNews, danhSachMovie, arrSell } = useSelector(state => state.QuanLyPhimReducer)
 
     const renderMovie = () => {
@@ -46,9 +46,10 @@ export default function News() {
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button size="small">
-                            <ThumbUpIcon/> <span style={{fontSize:20, marginLeft:5}}>1</span>
+                        <Button onClick ={()=> setState(state + 1)} size="small">
+                            <ThumbUpIcon />
                         </Button>
+                        <span style={{ fontSize: 20, marginLeft: 5 }}>{state}</span>
                         <Button size="small" >
                             < ChatBubbleOutlineIcon /> <span style={{ fontSize: 20, marginLeft: 5 }}>1</span>
                         </Button>
