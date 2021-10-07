@@ -204,7 +204,7 @@ function KetQuaDatVe(props) {
                             <img style={{ width: 100, height: 100, borderRadius: "50%" }} src={ticket.hinhAnh} />
                         </div>
                         <CardContent style={{height:"auto"}}>
-                                <Typography component="h4" variant="h6  " style={{fontWeight:600}}>{ticket.tenPhim}</Typography>
+                                <Typography className="mb-3" align="center" component="h4" variant="h6  " style={{fontWeight:600}}>{ticket.tenPhim}</Typography>
                             <p style={{fontSize:15}}><span style={{ fontWeight: 600 }}>Giờ chiếu:</span> {moment(ticket.ngayDat).format('hh:mm A')} - <span style={{ fontWeight: 600 }}>Ngày chiếu: </span> {moment(ticket.ngayChieu).format('DD-MM-YYYY')} .</p>
                             <p style={{ fontSize: 15 }}><span style={{ fontWeight: 600 }}>Địa điểm: </span> {seats.tenHeThongRap}</p>
                             <p style={{ fontSize: 15 }}><span style={{ fontWeight: 600 }}>Tên rạp: </span>{seats.tenCumRap} - <span style={{ fontWeight: 600 }}>Ghế: </span> {ticket.danhSachGhe.map((ghe, index) => { return <span key={index} style={{ color: "green", fontWeight: 700, fontSize: 18, wordBreak: "break-word", marginRight: 3 }}>{`[${ghe.tenGhe}]`}</span> })}</p>
