@@ -1,0 +1,3 @@
+export const DANG_NHAP_TYPE ='DANG_NHAP_TYPE';
+export const LAY_THONG_TIN_TAI_KHOAN = 'LAY_THONG_TIN_TAI_KHOAN'
+export const REMOVE_USER = 'REMOVE_USER'
