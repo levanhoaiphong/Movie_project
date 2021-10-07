@@ -1,5 +1,6 @@
 import { createBrowserHistory } from "history";
 import { Router } from "react-router-dom";
+import Loading from "./component/Loading";
 import Checkout from "./pages/Checkout";
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
@@ -12,6 +13,7 @@ export const history = createBrowserHistory()
 function App() {
   return (
     <Router history={history}>
+        <Loading/>
         <HomeTemPlate path="/home" exact Component={Home} />
         <HomeTemPlate path="/detail/:id" exact Component={Detail} />
         <HomeTemPlate path="/checkout/:id" exact Component={Checkout} />

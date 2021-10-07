@@ -6,7 +6,7 @@ const useStyle = makeStyles(() => {
         formSignin: {
             backgroundColor: "white",
             height:"100vh",
-            padding:30
+            padding:30,
         },
         textField:{
             textAlign:"center",

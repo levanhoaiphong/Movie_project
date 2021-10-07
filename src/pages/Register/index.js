@@ -6,7 +6,7 @@ import { GROUPID } from '../../util/config'
 import axios from 'axios'
 import { useHistory } from 'react-router'
 
-export default function Register() {
+export default function Register(props) {
     const classes = useStyle()
     const history = useHistory()
     const formik = useFormik({

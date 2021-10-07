@@ -17,7 +17,7 @@ const useStyle = makeStyles((theme) => {
         },
         content_overview_title: {
             fontSize: 18,
-            width: 120
+            width: 100
         },
         content_overview_info: {
             fontSize: 18,

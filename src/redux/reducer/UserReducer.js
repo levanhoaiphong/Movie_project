@@ -15,6 +15,7 @@ const QuanLyNguoiDungReducer = (state = stateDefault, action)=>{
         case DANG_NHAP_TYPE:{
             localStorage.setItem(USER_LOGIN, JSON.stringify(action.payload))
             localStorage.setItem(TOKEN, action.payload.accessToken)
+            state.userLogin = user
             return {...state}
         }
         case LAY_THONG_TIN_TAI_KHOAN:{
@@ -22,7 +23,8 @@ const QuanLyNguoiDungReducer = (state = stateDefault, action)=>{
             return { ...state }
         }
         case REMOVE_USER:{
-            state.userLogin = []
+            state.userLogin = ''
+            return { ...state }
         }
         default:
             return {...state}
@@ -30,3 +32,4 @@ const QuanLyNguoiDungReducer = (state = stateDefault, action)=>{
 }
 
 export default QuanLyNguoiDungReducer
+

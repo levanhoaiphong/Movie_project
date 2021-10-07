@@ -13,10 +13,10 @@ import { NavLink } from 'react-router-dom';
 
 const { TabPane } = Tabs;
 export default function Detail(props) {
-    const [state, setState] = useState({
+    const [state] = useState({
         tabPosition: "left",
     });
-    const [stateTop, setStateTop] = useState({
+    const [stateTop] = useState({
         tabPosition: "top",
     });
     const theme = useTheme()

@@ -6,6 +6,7 @@ import { NavLink, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import _ from 'lodash';
 import { REMOVE_USER } from '../../../../redux/type/QuanLyNguoiDungType';
+import { signOut } from '../../../../redux/action/QuanLyNguoiDung';
 
 
 
@@ -22,7 +23,7 @@ export default function Header(props) {
     const handleMenu = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    console.log(history)
+
     const handleClose = (pageUrl) => {
         history.push(pageUrl)
         setAnchorEl(null);
@@ -35,12 +36,10 @@ export default function Header(props) {
             </Fragment>
         }
         return <div className="dropdown">
-            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Hello, {userLogin.taiKhoan}</button>
+            <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Hello, {userLogin.taiKhoan}</button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <button onClick={()=>{
-                    dispatch({
-                        type: REMOVE_USER
-                    })
+                    dispatch(signOut())
                 }} className="dropdown-item" href="#">Logout</button>
                 <a className="dropdown-item" href="#">Profile</a>
             </div>
@@ -84,7 +83,6 @@ export default function Header(props) {
                         >   <MenuItem className={classes.buttonText} onClick={() => handleClose("/")}>Lịch chiếu</MenuItem>
                             <MenuItem className={classes.buttonText} onClick={() => handleClose}>Cụm rạp</MenuItem>
                             <MenuItem className={classes.buttonText} onClick={() => handleClose}>Tin tức</MenuItem>
-                            <MenuItem className={classes.buttonText} onClick={() => handleClose}>Ứng dụng</MenuItem>
                             <div>
                                 {rederLogin()}
                             </div>
@@ -94,7 +92,6 @@ export default function Header(props) {
                             <NavLink className={classes.buttonText} component={Button} to="/" variant="text"  >Lịch chiếu</NavLink>
                             <NavLink className={classes.buttonText} component={Button} to="/" variant="text" >Cụm rạp</NavLink>
                             <NavLink className={classes.buttonText} component={Button} to="/" variant="text">Tin tức</NavLink>
-                            <NavLink className={classes.buttonText} component={Button} to="/" variant="text">Ứng dụng</NavLink>
                         </div>
                         <div>
                             {rederLogin()}

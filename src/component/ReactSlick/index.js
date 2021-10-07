@@ -1,11 +1,9 @@
 import React from 'react';
 import Slider from "react-slick";
-import Button from '@material-ui/core/Button';
 import styleClick from './slick.module.css'
 import Movie from '../Movie';
 import { LAY_DANH_SACH_PHIM_DANG_CHIEU, LAY_DANH_SACH_PHIM_SAP_CHIEU } from '../../redux/type/LayDanhSachPhimType';
 import { useDispatch, useSelector } from 'react-redux';
-import { colors } from '@material-ui/core';
 
 
 function SampleNextArrow(props) {

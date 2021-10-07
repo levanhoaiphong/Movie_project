@@ -14,6 +14,7 @@ const QuanLyRapReducer  = (state=stateDefault, action) =>{
         }
         case LAY_THONG_TIN_LICH_CHIEU_HE_THONG_RAP:{
             state.heThongRapChieu = action.payload
+            return { ...state }
         }
         default:
            return {...state}

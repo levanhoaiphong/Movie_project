@@ -1,8 +1,7 @@
 import React, { Fragment, useState } from 'react'
-import { Tabs, Radio, Space } from 'antd';
+import { Tabs} from 'antd';
 import { Button, Container, Grid, useMediaQuery, useTheme } from '@material-ui/core';
 import useStyles from './style';
-import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import moment from 'moment';
 
@@ -10,15 +9,12 @@ const { TabPane } = Tabs;
 export default function InformationCalendar(props) {
     const classes = useStyles()
     const theme = useTheme()
-    const [state, setState] = useState({
+    const [state] = useState({
         tabPosition: "left",
     })
-    const [stateTop, setStateTop] = useState({
+    const [stateTop] = useState({
         tabPosition: "top",
     });
-    const changeTabPosition = (e) => {
-        setState({ tabPosition: e.target.value });
-    };
     const isMobile = useMediaQuery(theme.breakpoints.down("xs"))
 
     const { heThongRapChieu } = props

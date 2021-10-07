@@ -6,6 +6,7 @@ import ReactSlick from '../../component/ReactSlick'
 import { layThongTinHeThongRapAction } from '../../redux/action/QuanLyCumRapAction'
 import { layDanhSachPhim } from '../../redux/action/QuanLyPhimAction'
 import HomeCarousel from '../../template/HomeTemplate/layout/HomeCarousel'
+import News from '../News'
 
 function Home() {
     const dispatch = useDispatch()
@@ -23,6 +24,7 @@ function Home() {
            <Container>
                <ReactSlick danhSachMovie = {danhSachMovie}/>
                <InformationCalendar heThongRapChieu = {heThongRapChieu}/>
+               <News/>
            </Container>
         </div>
     )

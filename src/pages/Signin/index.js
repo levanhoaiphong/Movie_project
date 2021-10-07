@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom'
 import { dangNhapAction } from '../../redux/action/QuanLyNguoiDung'
 import useStyle from './style'
 
-export default function Signin() {
+export default function Signin(props) {
     const classes = useStyle()
     const dispatch = useDispatch()
     const history = useHistory()
@@ -45,7 +45,7 @@ export default function Signin() {
                     </form>
                     <div className={classes.createAccount}>
                         <Typography variant="h5">Don't have an account?</Typography>
-                        <NavLink component={Button} variant="contained">Create new</NavLink>
+                        <NavLink to="/register" component={Button} variant="contained">Create new</NavLink>
                     </div>
                 </div>
             </Grid>
