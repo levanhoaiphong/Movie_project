@@ -29,11 +29,11 @@ export default function Movie(props) {
                             {movie.tenPhim.length > 30 ? <span >{movie.tenPhim.slice(0, 30)}...</span> : <span style={{ paddingBottom: "50px !important" }}>{movie.tenPhim}</span>}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            {movie.moTa.length > 400 ? <span>{movie.moTa.slice(0, 400)}...</span> : <span>{movie.moTa}</span>}
+                            {movie.moTa.length > 200 ? <span>{movie.moTa.slice(0, 200)}...</span> : <span>{movie.moTa}</span>}
                         </Typography>
                         <CardActions className={classes.button}>
-                             <NavLink component={Button} to={`/detail/${movie.maPhim}`} variant="contained" color="secondary">Detail</NavLink>
-                            <Button variant="contained" color="primary" >Xem trailer </Button>
+                            <NavLink className="btn_button" component={Button} to={`/detail/${movie.maPhim}`} variant="contained" color="secondary">Detail</NavLink>
+                            <Button className="btn_button" variant="contained" color="primary" >Xem trailer </Button>
                            
                         </CardActions>
                     </CardContent>

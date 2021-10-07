@@ -94,19 +94,19 @@ export default function News() {
     return (
         <Container style={{ margin: "70px 0px" }}>
             <Tabs centered defaultActiveKey="1" onChange={(key) => { }}>
-                <TabPane tab={<h4>Tin tức</h4>} key="1"
+                <TabPane tab={<h6 className="tabs_title">Tin tức</h6>} key="1"
                 >
                     <Grid container spacing={1}>
                         {renderMovie()}
                     </Grid>
 
                 </TabPane>
-                <TabPane tab={<h4>Review</h4>} key="2">
+                <TabPane tab={<h6 className="tabs_title">Review</h6>} key="2">
                     <Grid container spacing={1}>
                         {renderReview()}
                     </Grid>
                 </TabPane>
-                <TabPane tab={<h4>Khuyến mãi</h4>} key="3">
+                <TabPane tab={<h6 className="tabs_title">Khuyến mãi</h6>} key="3">
                     <Grid container spacing={1}>
                         {renderSell()}
                     </Grid>

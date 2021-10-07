@@ -23,14 +23,12 @@ export const layChiTietPhongVeAction = (maLichChieu) =>{
 export const datVeAction = (thongTinDatVe = new ThongTinDatVe) =>{
     return async dispatch =>{
         try{
-
-            dispatch(displayLoadingAction)
             const result = await quanLyPhongVe.datve(thongTinDatVe)
-            
+            dispatch(displayLoadingAction)
             await dispatch(layChiTietPhongVeAction(thongTinDatVe.maLichChieu))
             await dispatch({type:DAT_VE_HOAN_TAT})
-
             await dispatch(hideLoadingAction)
+
             dispatch({type:CHUYEN_TAB})
             
         }catch(error){

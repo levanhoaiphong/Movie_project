@@ -7,3 +7,15 @@
 .dienanh:hover{
     background-color: #f37520;
 }
+
+.tabs_title{
+    font-size: 20px;
+}
+.tabs_title:active{
+    color: #f37520;
+}
+@media screen and (max-width:414px) {
+    .tabs_title{
+    font-size: 15px;
+}
+}

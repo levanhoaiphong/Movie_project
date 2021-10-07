@@ -1,2 +1,2 @@
-export const DISPLAY_LOADIG = "DISPLAY_LOADInG"
-export const HIDE_LOADIG = "HIDE_LOADInG"
+export const DISPLAY_LOADING = "DISPLAY_LOADInG"
+export const HIDE_LOADING = "HIDE_LOADInG"

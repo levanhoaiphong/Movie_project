@@ -1,5 +1,4 @@
-import { defaults } from "lodash-es"
-import { DISPLAY_LOADIG, HIDE_LOADIG } from "../type/LoadingType"
+
 
 
 const stateDefault ={
@@ -8,11 +7,11 @@ const stateDefault ={
 
 export const LoadingReducer = (state = stateDefault, action)=>{
     switch(action.type){
-        case DISPLAY_LOADIG:{
+        case 'DISPLAY_LOADING':{
             state.isLoading = true
             return {...state}
         }
-        case HIDE_LOADIG:{
+        case 'HIDE_LOADING':{
             state.isLoading = false
             return { ...state }
         }
