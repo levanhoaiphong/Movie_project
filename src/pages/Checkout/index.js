@@ -201,7 +201,7 @@ function KetQuaDatVe(props) {
                 <Grid item xs={12} md={4} key={index}>
                     <Card style={{height: "400px" }} className="mb-2" >
                         <div style={{textAlign:"center"}}>
-                            <img style={{ width: 100, height: 100, borderRadius: "50%" }} src={ticket.hinhAnh} />
+                            <img style={{ width: 100, height: 100, borderRadius: "50%", marginTop: 5 }} src={ticket.hinhAnh} />
                         </div>
                         <CardContent style={{height:"auto"}}>
                                 <Typography className="mb-3" align="center" component="h4" variant="h6" style={{fontWeight:600}}>{ticket.tenPhim}</Typography>
